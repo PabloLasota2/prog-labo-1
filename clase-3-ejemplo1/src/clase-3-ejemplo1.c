@@ -36,7 +36,7 @@ int main(void)
 
 int utn_sumaDosEnteros(int a, int b) //suma dos numeros enteros que nos llegan del usuarios
 {
-	int res;
+	int res; //Variable Local
 	res = a + b;
 	return res;
 }
