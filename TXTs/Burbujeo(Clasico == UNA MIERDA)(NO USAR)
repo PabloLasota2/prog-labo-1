@@ -1,0 +1,27 @@
+
+
+...ORDENA COMO EL EL CULO Y TARDA 9812731649 ITERACIONES PARA OERDENAR CUALQUIER COSA...
+
+
+int ordenarArrayInt(int* pArray, int arrayLen)
+{
+	int retorno = -1;
+	int buffer;
+
+	if(pArray != NULL && arrayLen >= 0)
+	{
+		for(int i = 0; i < arrayLen-1; i++)
+		{
+			for(int j = i+1; j < arrayLen; j++)
+			{
+				if(pArray[i] < pArray[i+1])
+				{
+					buffer = pArray[i];
+					pArray[i] = pArray[j];
+					pArray[j] = buffer;
+				}
+			}
+		}
+	}
+	return retorno;
+}

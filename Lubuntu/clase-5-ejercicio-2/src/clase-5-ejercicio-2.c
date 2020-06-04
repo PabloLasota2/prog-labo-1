@@ -12,7 +12,6 @@ int main(void)
 	int edades[CANT_EDADES];
 	int respuesta;
 	int resultado;
-	int i;
 
 	for(int i = 0; i < CANT_EDADES; i++)
 	{

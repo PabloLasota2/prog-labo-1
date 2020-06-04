@@ -1,0 +1,31 @@
+
+
+...A ESTE METODO LE LLEVA 48 ITERACION ORDENAR 9 NUMEROS...
+
+
+int ordenarArrayInt(int* pArray, int arrayLen)
+{
+	int retorno = -1;
+	int flagSwap;
+	int buffer;
+
+	if(pArray != NULL && arrayLen >= 0)
+	{
+		retorno = 0;
+		do
+		{
+			flagSwap = 0;
+			for(int i = 0; i < arrayLen-1; i++)
+			{
+				if(pArray[i] < pArray[i+1])
+				{
+					flagSwap = 1;
+					buffer = pArray[i];
+					pArray[i] = pArray[i+1];
+					pArray[i+1] = buffer;
+				}
+			}
+		}while(flagSwap);
+	}
+	return retorno;
+}
