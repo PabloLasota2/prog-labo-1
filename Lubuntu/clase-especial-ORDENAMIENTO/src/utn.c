@@ -107,3 +107,62 @@ int utn_imprimirArrayInt(int arrayInt[],int arrayLen)
 	return retorno;
 }
 
+int utn_ordenarArrayIntMayor(int* pArray, int arrayLen)
+{
+	int retorno = -1;
+	int flagSwap;
+	int buffer;
+	int limite;
+
+	if(pArray != NULL && arrayLen >= 0)
+	{
+		limite = arrayLen -1;
+		retorno = 0;
+		do
+		{
+			flagSwap = 0;
+			for(int i = 0; i < limite; i++)
+			{
+				if(pArray[i] < pArray[i+1])
+				{
+					flagSwap = 1;
+					buffer = pArray[i];
+					pArray[i] = pArray[i+1];
+					pArray[i+1] = buffer;
+				}
+			}
+			limite--;
+		}while(flagSwap);
+	}
+	return retorno;
+}
+
+int utn_ordenarArrayIntMenor(int* pArray, int arrayLen)
+{
+	int retorno = -1;
+	int flagSwap;
+	int buffer;
+	int limite;
+
+	if(pArray != NULL && arrayLen >= 0)
+	{
+		limite = arrayLen -1;
+		retorno = 0;
+		do
+		{
+			flagSwap = 0;
+			for(int i = 0; i < limite; i++)
+			{
+				if(pArray[i] < pArray[i+1])
+				{
+					flagSwap = 1;
+					buffer = pArray[i];
+					pArray[i] = pArray[i+1];
+					pArray[i+1] = buffer;
+				}
+			}
+			limite--;
+		}while(flagSwap);
+	}
+	return retorno;
+}
